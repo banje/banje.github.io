@@ -2,7 +2,7 @@
 <img id='b'>
 <script>
   async function A(d){
-    return await new promise(function(e,f){
+    return await new Promise(function(e,f){
       let c=document.getElementById('a')
       c.src=`http://127.0.0.1:8000/search?query=${d}`
       c.onload=function(){
