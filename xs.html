@@ -6,7 +6,7 @@
       let c=document.getElementById('a')
       c.src=`http://127.0.0.1:8000/search?query=${d}`
       c.onload=function(){
-        if (a.content.Window.frames.length==1)
+        if (c.content.Window.frames.length!=1)
           return e()
         else
           return f()
